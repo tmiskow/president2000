@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polish Presidential Election 2000 - Lubelskie - Constituency#9 - Radzyński</title>
+
+    <!-- UIkit CSS & JS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+
+        <!-- Google Charts -->
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <!-- Google Fonts: Lato -->
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet">
+
+        <script>
+            const drawMap = false;
+            const drawBarchart = true;
+
+            const turnout = 0.592317042501467;
+
+			const turnoutArray = [
+				['Gminas',   'Turnout'],
+                
+                    ['Borki', 0.5250215703192407],
+                
+                    ['Czemierniki', 0.6378334680679062],
+                
+                    ['Komarówka Podlaska', 0.6112229491696024],
+                
+                    ['Kąkolewnica Wschodnia', 0.6007509386733417],
+                
+                    ['Radzyń Podlaski', 0.6141588710956081],
+                
+                    ['Radzyń Podlaski gm.', 0.5594168503136124],
+                
+                    ['Ulan-Majorat', 0.6311946902654867],
+                
+                    ['Wohyń', 0.5515912897822446],
+                
+			];
+
+			const resultsArray = [
+				['Candidate', 'Votes'],
+                
+                    ['Aleksander Kwaśniewski', 10976],
+                
+                    ['Jarosław Kalinowski', 7696],
+                
+                    ['Marian Krzaklewski', 3880],
+                
+                    ['Andrzej Marian Olechowski', 2310],
+                
+                    ['Andrzej Lepper', 2034],
+                
+                    ['Jan Łopuszański', 316],
+                
+                    ['Janusz Korwin-Mikke', 230],
+                
+                    ['Lech Wałęsa', 186],
+                
+                    ['Dariusz Maciej Grabowski', 154],
+                
+                    ['Tadeusz Adam Wilecki', 53],
+                
+                    ['Piotr Ikonowicz', 40],
+                
+                    ['Bogdan Pawłowski', 25],
+                
+			];
+
+			resultsArray.sort(function (a, b) {
+                return b[1] - a[1];
+            });
+		</script>
+
+        <script src="../../../js/turnout.js"></script>
+        <script src="../../../js/results.js"></script>
+		<script src="../../../js/index.js"></script>
+        <link rel="stylesheet" href="../../../css/index.css"/>
+        <link rel="stylesheet" href="../../../css/uikit-addon-grid.css"/>
+</head>
+<body class="uk-flex uk-flex-column">
+    <header class="uk-navbar-container uk-padding-small uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left uk-margin-left">
+            <a class="uk-logo" href="../../../">
+                Polish Presidential Election 2000
+            </a>
+        </div>
+        <nav class="uk-navbar-right">
+            <ul class="uk-breadcrumb uk-margin-remove-vertical uk-margin-right">
+                <li><a class="uk-link-heading" href="../../../">Poland</a></li>
+                <li><a class="uk-link-heading" href="../../">Lubelskie</a></li>
+                <li><a class="uk-link-heading" href="../">Constituency #9</a></li>
+                <li><a class="uk-link-heading" href="">Radzyński</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr class="uk-margin-remove-top">
+    <main class="uk-flex uk-child-width-1-2@l uk-grid-small uk-grid-match uk-padding uk-padding-remove-vertical" uk-grid>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Winner</span>
+                    </div>
+                </header>
+                <div class="uk-flex uk-padding uk-padding-remove-vertical" uk-grid>
+                    <div class="uk-flex uk-width-expand">
+                        <div class="uk-padding-small uk-margin-right uk-flex uk-flex-middle">
+                            <img class="uk-border-circle winner-portrait" src="../../../images/kwasniewski.jpg" alt="Winner portrait">
+                        </div>
+                        <div class="uk-flex uk-flex-left uk-flex uk-flex-middle">
+                            <span class="uk-h3 uk-margin-remove-bottom">Aleksander Kwaśniewski</span>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-column uk-flex-center">
+                        <div class="uk-flex uk-flex-left">
+                            <div class="uk-padding-small uk-margin-right">
+                                <img class="uk-border-circle candidate-portrait" src="../../../images/kalinowski.jpg" alt="Second candidate image">
+                            </div>
+                            <div class="uk-flex uk-flex-left uk-flex-column uk-flex-center">
+                                <span>2.&nbsp; Jarosław Kalinowski</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex">
+                            <div class="uk-padding-small uk-margin-right">
+                                <img class="uk-border-circle candidate-portrait" src="../../../images/krzaklewski.jpg" alt="Third candidate image">
+                            </div>
+                            <div class="uk-flex uk-flex-left uk-flex-column uk-flex-center">
+                                <span>3.&nbsp; Marian Krzaklewski</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Turnout</span>
+                    </div>
+                </header>
+                <div class="uk-flex uk-flex-center uk-flex-middle" uk-grid>
+                    <div class="uk-text-right uk-width-1-2">
+                        <span id="turnout-text">59%</span>
+                    </div>
+                    <div id="turnout-donut" class="uk-width-1-2"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-remove-bottom">
+                        <span class="uk-h4">Results</span>
+                    </div>
+                    <div class="uk-align-right uk-margin-remove-bottom">
+                        <ul uk-tab="connect: .results-switcher">
+                            <li class="uk-active"><a href="#">Barchart</a></li>
+                            <li><a href="#">Piechart</a></li>
+                            <li><a href="#">Table</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <ul class="uk-switcher results-switcher">
+                    <li id="results-barchart-container">
+                        <div id="results-barchart" class="google-chart"></div>
+                    </li>
+                    <li id="results-piechart-container">
+                        <div id="results-piechart" class="google-chart"></div>
+                    </li>
+                    <li>
+                        <table class="uk-table uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th>Candidate</th>
+                                    <th>Votes</th>
+                                    <th>Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>Aleksander Kwaśniewski</td>
+                                        <td>10976</td>
+                                        <td>39%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Jarosław Kalinowski</td>
+                                        <td>7696</td>
+                                        <td>28%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Marian Krzaklewski</td>
+                                        <td>3880</td>
+                                        <td>14%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Andrzej Marian Olechowski</td>
+                                        <td>2310</td>
+                                        <td>8%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Andrzej Lepper</td>
+                                        <td>2034</td>
+                                        <td>7%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Jan Łopuszański</td>
+                                        <td>316</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Janusz Korwin-Mikke</td>
+                                        <td>230</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Lech Wałęsa</td>
+                                        <td>186</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Dariusz Maciej Grabowski</td>
+                                        <td>154</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Tadeusz Adam Wilecki</td>
+                                        <td>53</td>
+                                        <td>0%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Piotr Ikonowicz</td>
+                                        <td>40</td>
+                                        <td>0%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Bogdan Pawłowski</td>
+                                        <td>25</td>
+                                        <td>0%</td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-remove-bottom">
+                        <span class="uk-h4">Turnout by gmina</span>
+                    </div>
+                    <div class="uk-align-right uk-margin-remove-bottom">
+                        <ul uk-tab="connect: .turnout-switcher">
+                            <li class="uk-active"><a href="#">Barchart</a></li>
+                            <li><a href="#">Table</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <ul class="uk-switcher turnout-switcher">
+                    <li id="turnout-barchart-container">
+                        <div id="turnout-barchart" class="google-chart"></div>
+                    </li>
+                    <li>
+                        <table class="uk-table uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th>Gmina</th>
+                                    <th>Turnout</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>Borki</td>
+                                        <td>53%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Czemierniki</td>
+                                        <td>64%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Komarówka Podlaska</td>
+                                        <td>61%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Kąkolewnica Wschodnia</td>
+                                        <td>60%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Radzyń Podlaski</td>
+                                        <td>61%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Radzyń Podlaski Gm.</td>
+                                        <td>56%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Ulan-Majorat</td>
+                                        <td>63%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Wohyń</td>
+                                        <td>55%</td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Go to gminas:</span>
+                    </div>
+                </header>
+                <div class="uk-grid-small uk-text-center" uk-grid>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="borki">Borki</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="czemierniki">Czemierniki</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="komarówka_podlaska">Komarówka Podlaska</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="kąkolewnica_wschodnia">Kąkolewnica Wschodnia</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="radzyń_podlaski">Radzyń Podlaski</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="radzyń_podlaski_gm.">Radzyń Podlaski Gm.</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="ulan-majorat">Ulan-Majorat</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="wohyń">Wohyń</a>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <hr class="uk-margin-remove-bottom">
+    <footer class="uk-navbar-container uk-padding-xsmall uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-right uk-margin-small-right">
+            <span>&copy; Tomasz Miśków</span>
+        </div>
+    </footer>
+</body>
+</html>

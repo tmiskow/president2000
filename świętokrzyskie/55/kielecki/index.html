@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polish Presidential Election 2000 - Świętokrzyskie - Constituency#55 - Kielecki</title>
+
+    <!-- UIkit CSS & JS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+
+        <!-- Google Charts -->
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <!-- Google Fonts: Lato -->
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet">
+
+        <script>
+            const drawMap = false;
+            const drawBarchart = true;
+
+            const turnout = 0.5345021017950465;
+
+			const turnoutArray = [
+				['Gminas',   'Turnout'],
+                
+                    ['Bieliny', 0.4952561669829222],
+                
+                    ['Bodzentyn', 0.5087116001834021],
+                
+                    ['Chmielnik', 0.5380249716231555],
+                
+                    ['Chęciny', 0.5833333333333334],
+                
+                    ['Daleszyce', 0.4930421533773489],
+                
+                    ['Górno', 0.5064577852188472],
+                
+                    ['Masłów', 0.5648104077423449],
+                
+                    ['Miedziana Góra', 0.5447092758463641],
+                
+                    ['Mniów', 0.5289205072687906],
+                
+                    ['Morawica', 0.5386162034299231],
+                
+                    ['Nowa Słupia', 0.499935757420018],
+                
+                    ['Piekoszów', 0.5440918824216469],
+                
+                    ['Pierzchnica', 0.5069820461669992],
+                
+                    ['Raków', 0.4906492960706031],
+                
+                    ['Sitkówka-Nowiny', 0.6137407629318954],
+                
+                    ['Strawczyn', 0.5457980652962515],
+                
+                    ['Zagnańsk', 0.5951482479784367],
+                
+                    ['Łagów', 0.4391564016424039],
+                
+                    ['Łopuszno', 0.5726832222895215],
+                
+			];
+
+			const resultsArray = [
+				['Candidate', 'Votes'],
+                
+                    ['Aleksander Kwaśniewski', 42730],
+                
+                    ['Marian Krzaklewski', 9378],
+                
+                    ['Jarosław Kalinowski', 8646],
+                
+                    ['Andrzej Marian Olechowski', 6723],
+                
+                    ['Andrzej Lepper', 3871],
+                
+                    ['Jan Łopuszański', 814],
+                
+                    ['Janusz Korwin-Mikke', 638],
+                
+                    ['Lech Wałęsa', 516],
+                
+                    ['Dariusz Maciej Grabowski', 376],
+                
+                    ['Piotr Ikonowicz', 160],
+                
+                    ['Tadeusz Adam Wilecki', 141],
+                
+                    ['Bogdan Pawłowski', 77],
+                
+			];
+
+			resultsArray.sort(function (a, b) {
+                return b[1] - a[1];
+            });
+		</script>
+
+        <script src="../../../js/turnout.js"></script>
+        <script src="../../../js/results.js"></script>
+		<script src="../../../js/index.js"></script>
+        <link rel="stylesheet" href="../../../css/index.css"/>
+        <link rel="stylesheet" href="../../../css/uikit-addon-grid.css"/>
+</head>
+<body class="uk-flex uk-flex-column">
+    <header class="uk-navbar-container uk-padding-small uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left uk-margin-left">
+            <a class="uk-logo" href="../../../">
+                Polish Presidential Election 2000
+            </a>
+        </div>
+        <nav class="uk-navbar-right">
+            <ul class="uk-breadcrumb uk-margin-remove-vertical uk-margin-right">
+                <li><a class="uk-link-heading" href="../../../">Poland</a></li>
+                <li><a class="uk-link-heading" href="../../">Świętokrzyskie</a></li>
+                <li><a class="uk-link-heading" href="../">Constituency #55</a></li>
+                <li><a class="uk-link-heading" href="">Kielecki</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr class="uk-margin-remove-top">
+    <main class="uk-flex uk-child-width-1-2@l uk-grid-small uk-grid-match uk-padding uk-padding-remove-vertical" uk-grid>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Winner</span>
+                    </div>
+                </header>
+                <div class="uk-flex uk-padding uk-padding-remove-vertical" uk-grid>
+                    <div class="uk-flex uk-width-expand">
+                        <div class="uk-padding-small uk-margin-right uk-flex uk-flex-middle">
+                            <img class="uk-border-circle winner-portrait" src="../../../images/kwasniewski.jpg" alt="Winner portrait">
+                        </div>
+                        <div class="uk-flex uk-flex-left uk-flex uk-flex-middle">
+                            <span class="uk-h3 uk-margin-remove-bottom">Aleksander Kwaśniewski</span>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-column uk-flex-center">
+                        <div class="uk-flex uk-flex-left">
+                            <div class="uk-padding-small uk-margin-right">
+                                <img class="uk-border-circle candidate-portrait" src="../../../images/krzaklewski.jpg" alt="Second candidate image">
+                            </div>
+                            <div class="uk-flex uk-flex-left uk-flex-column uk-flex-center">
+                                <span>2.&nbsp; Marian Krzaklewski</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex">
+                            <div class="uk-padding-small uk-margin-right">
+                                <img class="uk-border-circle candidate-portrait" src="../../../images/kalinowski.jpg" alt="Third candidate image">
+                            </div>
+                            <div class="uk-flex uk-flex-left uk-flex-column uk-flex-center">
+                                <span>3.&nbsp; Jarosław Kalinowski</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Turnout</span>
+                    </div>
+                </header>
+                <div class="uk-flex uk-flex-center uk-flex-middle" uk-grid>
+                    <div class="uk-text-right uk-width-1-2">
+                        <span id="turnout-text">53%</span>
+                    </div>
+                    <div id="turnout-donut" class="uk-width-1-2"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-remove-bottom">
+                        <span class="uk-h4">Results</span>
+                    </div>
+                    <div class="uk-align-right uk-margin-remove-bottom">
+                        <ul uk-tab="connect: .results-switcher">
+                            <li class="uk-active"><a href="#">Barchart</a></li>
+                            <li><a href="#">Piechart</a></li>
+                            <li><a href="#">Table</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <ul class="uk-switcher results-switcher">
+                    <li id="results-barchart-container">
+                        <div id="results-barchart" class="google-chart"></div>
+                    </li>
+                    <li id="results-piechart-container">
+                        <div id="results-piechart" class="google-chart"></div>
+                    </li>
+                    <li>
+                        <table class="uk-table uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th>Candidate</th>
+                                    <th>Votes</th>
+                                    <th>Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>Aleksander Kwaśniewski</td>
+                                        <td>42730</td>
+                                        <td>58%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Marian Krzaklewski</td>
+                                        <td>9378</td>
+                                        <td>13%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Jarosław Kalinowski</td>
+                                        <td>8646</td>
+                                        <td>12%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Andrzej Marian Olechowski</td>
+                                        <td>6723</td>
+                                        <td>9%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Andrzej Lepper</td>
+                                        <td>3871</td>
+                                        <td>5%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Jan Łopuszański</td>
+                                        <td>814</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Janusz Korwin-Mikke</td>
+                                        <td>638</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Lech Wałęsa</td>
+                                        <td>516</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Dariusz Maciej Grabowski</td>
+                                        <td>376</td>
+                                        <td>1%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Piotr Ikonowicz</td>
+                                        <td>160</td>
+                                        <td>0%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Tadeusz Adam Wilecki</td>
+                                        <td>141</td>
+                                        <td>0%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Bogdan Pawłowski</td>
+                                        <td>77</td>
+                                        <td>0%</td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-remove-bottom">
+                        <span class="uk-h4">Turnout by gmina</span>
+                    </div>
+                    <div class="uk-align-right uk-margin-remove-bottom">
+                        <ul uk-tab="connect: .turnout-switcher">
+                            <li class="uk-active"><a href="#">Barchart</a></li>
+                            <li><a href="#">Table</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <ul class="uk-switcher turnout-switcher">
+                    <li id="turnout-barchart-container">
+                        <div id="turnout-barchart" class="google-chart"></div>
+                    </li>
+                    <li>
+                        <table class="uk-table uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th>Gmina</th>
+                                    <th>Turnout</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        <td>Bieliny</td>
+                                        <td>50%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Bodzentyn</td>
+                                        <td>51%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Chmielnik</td>
+                                        <td>54%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Chęciny</td>
+                                        <td>58%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Daleszyce</td>
+                                        <td>49%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Górno</td>
+                                        <td>51%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Masłów</td>
+                                        <td>56%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Miedziana Góra</td>
+                                        <td>54%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Mniów</td>
+                                        <td>53%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Morawica</td>
+                                        <td>54%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Nowa Słupia</td>
+                                        <td>50%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Piekoszów</td>
+                                        <td>54%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Pierzchnica</td>
+                                        <td>51%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Raków</td>
+                                        <td>49%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Sitkówka-Nowiny</td>
+                                        <td>61%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Strawczyn</td>
+                                        <td>55%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Zagnańsk</td>
+                                        <td>60%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Łagów</td>
+                                        <td>44%</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>Łopuszno</td>
+                                        <td>57%</td>
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-width-expand">
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Go to gminas:</span>
+                    </div>
+                </header>
+                <div class="uk-grid-small uk-text-center" uk-grid>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="bieliny">Bieliny</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="bodzentyn">Bodzentyn</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="chmielnik">Chmielnik</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="chęciny">Chęciny</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="daleszyce">Daleszyce</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="górno">Górno</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="masłów">Masłów</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="miedziana_góra">Miedziana Góra</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="mniów">Mniów</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="morawica">Morawica</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="nowa_słupia">Nowa Słupia</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="piekoszów">Piekoszów</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="pierzchnica">Pierzchnica</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="raków">Raków</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="sitkówka-nowiny">Sitkówka-Nowiny</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="strawczyn">Strawczyn</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="zagnańsk">Zagnańsk</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="łagów">Łagów</a>
+                            </div>
+                        </div>
+                    
+                        <div class="uk-width-xlarge-1-8 uk-width-medium-1-4 uk-width-1-2">
+                            <div class="uk-tile uk-padding-small">
+                                <a class="uk-link-heading" href="łopuszno">Łopuszno</a>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <hr class="uk-margin-remove-bottom">
+    <footer class="uk-navbar-container uk-padding-xsmall uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-right uk-margin-small-right">
+            <span>&copy; Tomasz Miśków</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polish Presidential Election 2000 - Dolnośląskie - Constituency#4 - Kłodzki - Kudowa-Zdrój</title>
+
+    <!-- UIkit CSS & JS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+
+        <!-- Google Charts -->
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <!-- Google Fonts: Lato -->
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet">
+
+        <script>
+            const drawMap = false;
+            const drawBarchart = false;
+
+            const turnout = 0.606883011895138;
+
+			const resultsArray = [
+				['Candidate', 'Votes'],
+                
+                    ['Aleksander Kwaśniewski', 3004],
+                
+                    ['Marian Krzaklewski', 1000],
+                
+                    ['Andrzej Marian Olechowski', 798],
+                
+                    ['Andrzej Lepper', 114],
+                
+                    ['Jarosław Kalinowski', 104],
+                
+                    ['Lech Wałęsa', 45],
+                
+                    ['Janusz Korwin-Mikke', 43],
+                
+                    ['Dariusz Maciej Grabowski', 40],
+                
+                    ['Jan Łopuszański', 24],
+                
+                    ['Bogdan Pawłowski', 8],
+                
+                    ['Piotr Ikonowicz', 8],
+                
+                    ['Tadeusz Adam Wilecki', 3],
+                
+			];
+
+			resultsArray.sort(function (a, b) {
+                return b[1] - a[1];
+            });
+		</script>
+
+        <script src="../../../../js/turnout.js"></script>
+        <script src="../../../../js/results.js"></script>
+		<script src="../../../../js/index.js"></script>
+        <link rel="stylesheet" href="../../../../css/index.css"/>
+        <link rel="stylesheet" href="../../../../css/uikit-addon-grid.css"/>
+</head>
+<body class="uk-flex uk-flex-column">
+    <header class="uk-navbar-container uk-padding-small uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left uk-margin-left">
+            <a class="uk-logo" href="../../../..">
+                Polish Presidential Election 2000
+            </a>
+        </div>
+        <nav class="uk-navbar-right">
+            <ul class="uk-breadcrumb uk-margin-remove-vertical uk-margin-right">
+                <li><a class="uk-link-heading" href="../../../../">Poland</a></li>
+                <li><a class="uk-link-heading" href="../../../">Dolnośląskie</a></li>
+                <li><a class="uk-link-heading" href="../../">Constituency #4</a></li>
+                <li><a class="uk-link-heading" href="../">Kłodzki</a></li>
+                <li><a class="uk-link-heading" href="">Kudowa-Zdrój</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr class="uk-margin-remove-top">
+    <main class="uk-flex uk-child-width-1-2@l uk-grid-small uk-grid-match uk-padding uk-padding-remove-vertical" uk-grid>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Winner</span>
+                    </div>
+                </header>
+                <div class="uk-flex uk-padding uk-padding-remove-vertical" uk-grid>
+                    <div class="uk-flex uk-width-expand">
+                        <div class="uk-padding-small uk-margin-right uk-flex uk-flex-middle">
+                            <img class="uk-border-circle winner-portrait" src="../../../../images/kwasniewski.jpg" alt="Winner portrait">
+                        </div>
+                        <div class="uk-flex uk-flex-left uk-flex uk-flex-middle">
+                            <span class="uk-h3 uk-margin-remove-bottom">Aleksander Kwaśniewski</span>
+                        </div>
+                    </div>
+                    <div class="uk-flex uk-flex-column uk-flex-center">
+                        <div class="uk-flex uk-flex-left">
+                            <div class="uk-padding-small uk-margin-right">
+                                <img class="uk-border-circle candidate-portrait" src="../../../../images/krzaklewski.jpg" alt="Second candidate image">
+                            </div>
+                            <div class="uk-flex uk-flex-left uk-flex-column uk-flex-center">
+                                <span>2.&nbsp; Marian Krzaklewski</span>
+                            </div>
+                        </div>
+                        <div class="uk-flex">
+                            <div class="uk-padding-small uk-margin-right">
+                                <img class="uk-border-circle candidate-portrait" src="../../../../images/olechowski.jpg" alt="Third candidate image">
+                            </div>
+                            <div class="uk-flex uk-flex-left uk-flex-column uk-flex-center">
+                                <span>3.&nbsp; Andrzej Marian Olechowski</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-small-bottom">
+                        <span class="uk-h4">Turnout</span>
+                    </div>
+                </header>
+                <div class="uk-flex uk-flex-center uk-flex-middle" uk-grid>
+                    <div class="uk-text-right uk-width-1-2">
+                        <span id="turnout-text">61%</span>
+                    </div>
+                    <div id="turnout-donut" class="uk-width-1-2"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-remove-bottom">
+                        <span class="uk-h4">Results</span>
+                    </div>
+                    <div class="uk-align-right uk-margin-remove-bottom">
+                        <ul uk-tab="connect: .results-switcher">
+                            <li class="uk-active"><a href="#">Barchart</a></li>
+                            <li><a href="#">Piechart</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <ul class="uk-switcher results-switcher">
+                    <li id="results-barchart-container">
+                        <div id="results-barchart" class="google-chart"></div>
+                    </li>
+                    <li id="results-piechart-container">
+                        <div id="results-piechart" class="google-chart"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="uk-tile uk-padding-small uk-tile-muted uk-flex uk-flex-column">
+                <header>
+                    <div class="uk-align-left uk-margin-remove-bottom">
+                        <span class="uk-h4">Results table</span>
+                    </div>
+                </header>
+                <table class="uk-table uk-table-divider">
+                    <thead>
+                        <tr>
+                            <th>Candidate</th>
+                            <th>Votes</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr>
+                                <td>Aleksander Kwaśniewski</td>
+                                <td>3004</td>
+                                <td>58%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Marian Krzaklewski</td>
+                                <td>1000</td>
+                                <td>19%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Andrzej Marian Olechowski</td>
+                                <td>798</td>
+                                <td>15%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Andrzej Lepper</td>
+                                <td>114</td>
+                                <td>2%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Jarosław Kalinowski</td>
+                                <td>104</td>
+                                <td>2%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Lech Wałęsa</td>
+                                <td>45</td>
+                                <td>1%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Janusz Korwin-Mikke</td>
+                                <td>43</td>
+                                <td>1%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Dariusz Maciej Grabowski</td>
+                                <td>40</td>
+                                <td>1%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Jan Łopuszański</td>
+                                <td>24</td>
+                                <td>0%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Bogdan Pawłowski</td>
+                                <td>8</td>
+                                <td>0%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Piotr Ikonowicz</td>
+                                <td>8</td>
+                                <td>0%</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Tadeusz Adam Wilecki</td>
+                                <td>3</td>
+                                <td>0%</td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <hr class="uk-margin-remove-bottom">
+    <footer class="uk-navbar-container uk-padding-xsmall uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-right uk-margin-small-right">
+            <span>&copy; Tomasz Miśków</span>
+        </div>
+    </footer>
+</body>
+</html>
